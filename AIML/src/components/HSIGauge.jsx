@@ -17,12 +17,12 @@ export default function HSIGauge({ value }) {
             value: value,
             gauge: {
               axis: { range: [0, 100] },
-              bar: { color: "cyan" },
+              bar: { color: "#00c6ff" },
               steps: [
-                { range: [0, 50], color: "green" },
-                { range: [50, 70], color: "yellow" },
-                { range: [70, 85], color: "orange" },
-                { range: [85, 100], color: "red" }
+                { range: [0, 50], color: "#14532d" },
+                { range: [50, 70], color: "#713f12" },
+                { range: [70, 85], color: "#92400e" },
+                { range: [85, 100], color: "#7f1d1d" }
               ]
             }
           }
@@ -31,9 +31,11 @@ export default function HSIGauge({ value }) {
           paper_bgcolor: "transparent",
           plot_bgcolor: "transparent",
           font: { color: "white" },
-          height: 350
+          height: 350,
+          margin: { t: 20, r: 20, b: 20, l: 20 }
         }}
         style={{ width: "100%" }}
+        config={{ displayModeBar: false }}
       />
     </div>
   );

@@ -9,6 +9,7 @@ import {
 import SignUpPage from "./pages/Register";
 import SignInPage from "./pages/Login";
 import Dashboard from "./pages/Dashboard";
+import PatientView from "./pages/PatientView";
 import ErrorBoundary from "./components/ErrorBoundary";
 
 // Protect a route — redirect to Clerk sign-in if not authenticated
@@ -62,6 +63,9 @@ export default function App() {
             </ProtectedRoute>
           }
         />
+
+        {/* Patient View — public, no auth required */}
+        <Route path="/hospitals" element={<PatientView />} />
       </Routes>
     </BrowserRouter>
   );

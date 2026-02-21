@@ -1,3 +1,4 @@
+import React from "react";
 import { Plus, Minus } from "lucide-react";
 
 export default function ResourceCard({
@@ -17,23 +18,23 @@ export default function ResourceCard({
   };
 
   return (
-    <div className="bg-gradient-to-br from-[#1c1c1f] to-[#141417] border border-yellow-600/30 rounded-2xl p-6 shadow-lg">
+    <div className="bg-[#111827] border border-gray-700 rounded-2xl p-6">
       <div className="flex justify-between items-center">
-        <div className="p-3 rounded-xl bg-yellow-600/10 border border-yellow-600/30">
-          <Icon className="text-yellow-500" size={24} />
+        <div className={`p-3 rounded-xl ${color} bg-opacity-20`}>
+          <Icon className="text-white" size={24} />
         </div>
 
         <div className="flex gap-2">
           <button
             onClick={decrease}
-            className="bg-gray-700 p-2 rounded-lg hover:bg-gray-600 transition"
+            className="bg-gray-700 p-2 rounded-lg hover:bg-gray-600 transition text-white"
           >
             <Minus size={16} />
           </button>
 
           <button
             onClick={increase}
-            className="bg-gray-700 p-2 rounded-lg hover:bg-gray-600 transition"
+            className="bg-gray-700 p-2 rounded-lg hover:bg-gray-600 transition text-white"
           >
             <Plus size={16} />
           </button>

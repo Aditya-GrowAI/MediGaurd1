@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import { useNavigate } from "react-router-dom";
 import { UserButton } from "@clerk/clerk-react";
 import { BedDouble, HeartPulse, Wind } from "lucide-react";
 import ResourceCard from "../components/ResourceCard";
@@ -12,6 +13,7 @@ import AlertPanel from "../components/AlertPanel";
 
 export default function Dashboard() {
   const BASE_URL = import.meta.env.VITE_API_URL;
+  const navigate = useNavigate();
 
   /* ================= STATES ================= */
 
@@ -190,7 +192,15 @@ export default function Dashboard() {
       {/* Header */}
       <div className="flex items-center justify-between mb-2">
         <h1 className="text-4xl font-bold">Hospital Resource Dashboard</h1>
-        <UserButton afterSignOutUrl="/sign-in" />
+        <div className="flex items-center gap-3">
+          <button
+            onClick={() => navigate("/hospitals")}
+            className="flex items-center gap-2 bg-blue-600 hover:bg-blue-700 text-white text-sm font-semibold px-4 py-2 rounded-xl transition"
+          >
+            🏥 Patient View
+          </button>
+          <UserButton afterSignOutUrl="/sign-in" />
+        </div>
       </div>
 
       <div className="mt-8">

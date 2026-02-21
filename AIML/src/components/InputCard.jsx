@@ -23,7 +23,7 @@ export default function InputCard({ inputs, setInputs, onUpdate }) {
           placeholder="Bed Usage %"
           value={inputs.bedRate || ""}
           onChange={(e) => handleChange("bedRate", e.target.value)}
-          className="bg-gray-800 p-3 rounded"
+          className="bg-gray-800 border border-gray-600 text-white placeholder-gray-400 p-3 rounded-lg focus:outline-none focus:ring-2 focus:ring-yellow-400"
         />
 
         <input
@@ -31,7 +31,7 @@ export default function InputCard({ inputs, setInputs, onUpdate }) {
           placeholder="ICU Usage %"
           value={inputs.icuRate || ""}
           onChange={(e) => handleChange("icuRate", e.target.value)}
-          className="bg-gray-800 p-3 rounded"
+          className="bg-gray-800 border border-gray-600 text-white placeholder-gray-400 p-3 rounded-lg focus:outline-none focus:ring-2 focus:ring-yellow-400"
         />
 
         <input
@@ -39,14 +39,14 @@ export default function InputCard({ inputs, setInputs, onUpdate }) {
           placeholder="Ventilator Usage %"
           value={inputs.ventRate || ""}
           onChange={(e) => handleChange("ventRate", e.target.value)}
-          className="bg-gray-800 p-3 rounded"
+          className="bg-gray-800 border border-gray-600 text-white placeholder-gray-400 p-3 rounded-lg focus:outline-none focus:ring-2 focus:ring-yellow-400"
         />
 
       </div>
 
       <button
         onClick={onUpdate}
-        className="mt-6 bg-yellow-500 hover:bg-yellow-600 px-6 py-2 rounded font-semibold"
+        className="mt-6 bg-yellow-500 hover:bg-yellow-600 text-black px-6 py-2 rounded-lg font-semibold transition"
       >
         UPDATE
       </button>
