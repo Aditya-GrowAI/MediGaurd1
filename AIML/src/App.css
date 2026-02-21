@@ -1,0 +1,12 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Clerk auth pages — center the widget on a dark background */
+.auth-clerk-container {
+  min-height: 100vh;
+  background-color: #0b0f1a;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
